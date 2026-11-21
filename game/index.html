@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LAMPLIGHT ARCHIVE</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="stage">
+  <div id="frame">
+    <canvas id="game" width="960" height="540" aria-label="LAMPLIGHT ARCHIVE, a top-down stealth game"></canvas>
+    <div id="hud">
+      <span id="hud-level">LEVEL 1</span>
+      <span id="hud-objective">Reach the exit unseen</span>
+      <div id="hud-meter" title="Detection"><div id="hud-meter-fill"></div></div>
+      <span id="hud-score">SCORE 0</span>
+      <span id="hud-hint">WASD move &middot; SHIFT sneak &middot; R restart &middot; M mute</span>
+    </div>
+    <div id="overlay">
+      <section id="panel-title" class="panel">
+        <h1>LAMPLIGHT ARCHIVE</h1>
+        <p class="tagline">Slip past the wardens of the night archive.</p>
+        <p class="objective">Objective &mdash; reach the exit unseen</p>
+        <ul class="controls">
+          <li><b>WASD / Arrows</b> move</li>
+          <li><b>Shift (hold)</b> sneak &mdash; slow and silent</li>
+          <li><b>R</b> restart level &nbsp;&middot;&nbsp; <b>1 2 3</b> jump to a level</li>
+        </ul>
+        <p class="note">Their sight cones burn yellow, then orange, then red.
+        Wardens halt and stare while they suspect you &mdash; break their line of sight
+        and the meter drains. Stay off the lamplight, and do not run past them.</p>
+        <p class="go">Press Enter to begin</p>
+      </section>
+      <section id="panel-caught" class="panel hidden">
+        <h1>CAUGHT</h1>
+        <p class="tagline">A warden's lamp found you in the stacks.</p>
+        <p class="go">Press R or Enter to try again</p>
+      </section>
+      <section id="panel-cleared" class="panel hidden">
+        <h1 id="clear-title">LEVEL CLEAR</h1>
+        <p id="clear-lines" class="scorelines"></p>
+        <p class="go" id="clear-go">Press Enter for the next level</p>
+      </section>
+    </div>
+  </div>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
